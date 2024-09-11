@@ -1,0 +1,27 @@
+@use "sass:color";
+
+:root {
+  // Base colors
+  --light: #e7e7be;
+  --dark: #1c1c26;
+  --darker: #03030e;
+  --grey: #efefef;
+  --grey-dark: #656565;
+
+  --bright: #b1938a;
+  --accent: #beb2a7;
+  --green: #d8d9c6;
+  --lilac: #cecad3;
+  --blue: #cdd6de;
+
+  // Brand colors
+  --primary-color: var(--green);
+
+  // UI colors
+  --line-color: var(--grey);
+
+  footer.light {
+    background-color: var(--light);
+    color: var(--dark);
+  }
+}
