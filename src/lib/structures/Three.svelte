@@ -2,6 +2,8 @@
   import { onMount, onDestroy } from "svelte";
   import * as THREE from "three";
 
+  import backgoundImage from "$lib/assets/40.jpg";
+
   let container;
   let camera, scene, renderer, planeMesh;
   let animationFrameId;
@@ -199,7 +201,7 @@
 <div bind:this={container}></div>
 
 <div class="animated__background" id="imageContainer">
-  <img id="myImage" src="src/lib/assets/40.jpg" alt="" />
+  <img id="myImage" src={backgoundImage} alt="" />
 </div>
 
 <style>
