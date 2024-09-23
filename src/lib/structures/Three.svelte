@@ -1,5 +1,5 @@
 <script>
-  import { onMount, onDestroy } from "svelte";
+  import { onMount } from "svelte";
   import * as THREE from "three";
 
   import backgoundImage from "$lib/assets/40.jpg";
@@ -7,10 +7,11 @@
   let container;
   let camera, scene, renderer, planeMesh;
   let animationFrameId;
+  let cachedCanvas;
 
   let currentState = {
     mousePosition: { x: 0, y: 0 },
-    waveIntensity: 0.005,
+    waveIntensity: 0.01,
     scrollY: 0,
     scrollIntensity: 0.2, // New property
   };
@@ -59,6 +60,10 @@
     }`;
 
   onMount(() => {
+    window.scrollTo(0, 0); // Reset scroll position to the top
+
+    cachedCanvas = document.createElement("canvas");
+
     window.addEventListener("scroll", handleScroll);
 
     const imageElement = document.getElementById("myImage");
@@ -206,11 +211,12 @@
 
 <style>
   .animated__background {
-    position: absolute;
+    position: relative;
     top: 0;
     inset: 0;
     width: 100%;
     height: 100vh;
+    z-index: -1;
   }
 
   :is(canvas) {

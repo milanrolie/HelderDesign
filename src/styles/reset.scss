@@ -73,7 +73,7 @@ section {
 #sentence,
 #sentenceScroll {
   display: block;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); // Modified line
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transform: translateY(3rem);
 }
 

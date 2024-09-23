@@ -25,8 +25,8 @@
   <div class="footer__container">
     <div class="footer__paragraph">
       <h3 class="footer__title mobile-hide">
-        Don’t hesitate to contact us, we’re keen to collaborate on a project or
-        just to chat!
+        Whether you have a question or a creative challenge, we’re here to help.
+        Reach out to us via email or give us a call. We’d love to hear from you!
       </h3>
       <div class="footer__links">
         <ul class="links__navigation links__list">
@@ -49,22 +49,22 @@
           </li>
           <li class="links__item">
             <a
-              href="mailto:contact@studiorolie.com"
+              href="mailto:info@helderdesign.studio"
               class="links__link noTransition"
-              >contact@studiorolie.com
+              >info@helderdesign.studio
             </a>
           </li>
           <li class="links__item margin__bottom">
             <a href="tel:+31612345678" class="links__link noTransition"
-              >+31 6 53 63 51 06</a
+              >+31 6 42 61 54 78</a
             >
           </li>
 
           <li class="links__item">
-            <p class="links__link">kvk 1234565432</p>
+            <p class="links__link">kvk 94349320</p>
           </li>
           <li class="links__item">
-            <p class="links__link">btw 1234565432</p>
+            <p class="links__link">btw NL866744319B01</p>
           </li>
         </ul>
       </div>
@@ -123,6 +123,13 @@
       fill="#ECECE2"
     />
   </svg>
+  <div class="footer__bottom">
+    <p class="bottom__text">© 2024 helderdesign</p>
+    <a class="bottom__text noTransition" href="#top">Terms & conditions</a>
+    <p class="bottom__text">
+      Website by <a href="https://studiorolie.com">studiorolie </a>
+    </p>
+  </div>
 </footer>
 
 <style>
@@ -135,7 +142,6 @@
     height: 80vh;
     padding: var(--padding-small);
     background: none;
-    padding-top: 10rem;
     z-index: 200;
     color: var(--light);
     pointer-events: none;
@@ -149,25 +155,13 @@
     height: 100%;
     background: rgb(255, 136, 0);
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.5;
   }
 
   .footer__paragraph {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 5rem;
-  }
-
-  .contact__link {
-    text-decoration: none;
-    font-weight: 200;
-    font-style: italic;
-    margin-right: 2px;
-    transition: 0.3s;
-  }
-
-  .contact__link:hover {
-    filter: blur(1px);
+    margin-bottom: 15rem;
   }
 
   .footer__title {

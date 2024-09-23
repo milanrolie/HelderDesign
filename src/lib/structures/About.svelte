@@ -5,73 +5,100 @@
 
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
-    const text = document.querySelector(".about__container .about__title");
-    // Split text into words instead of characters
-    const words = text.innerText
-      .split(" ")
-      .map((word) => `<span>${word} </span>`) // Add a space after each word to maintain original spacing
-      .join("");
-    text.innerHTML = words;
 
-    const animation = gsap.timeline({
+    // const text = document.querySelector(".about__container .about__title");
+    // // Split text into words instead of characters
+    // const words = text.innerText
+    //   .split(" ")
+    //   .map((word) => `<span>${word} </span>`) // Add a space after each word to maintain original spacing
+    //   .join("");
+    // text.innerHTML = words;
+
+    // const animation = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: ".about__title",
+    //     start: "top-=100",
+    //     end: "center",
+    //     scrub: false,
+    //   },
+    // });
+
+    // gsap.utils
+    //   .toArray(".about__container .about__title span")
+    //   .forEach((word, i) => {
+    //     animation.to(
+    //       word,
+    //       {
+    //         color: "#1E1E1E",
+    //         duration: 0,
+    //         ease: "none",
+    //       },
+    //       i * 0.05
+    //     );
+    //   });
+
+    gsap.to("#sentenceScroll", {
       scrollTrigger: {
-        trigger: ".about__container",
-        start: "top ",
-        end: "center",
-        scrub: true,
+        trigger: ".about__title",
+        start: "top-=500",
+        end: "bottom",
       },
+      duration: 1,
+      y: 0,
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      stagger: 0.08,
+      ease: "power4.out",
     });
-
-    // Animate each word span
-    gsap.utils
-      .toArray(".about__container .about__title span")
-      .forEach((word, i) => {
-        animation.to(
-          word,
-          {
-            color: "#efefef", // Change to desired color
-            duration: 0,
-            ease: "none",
-          },
-          i * 0.05 // Adjusted stagger time for words
-        );
-      });
   });
 </script>
 
 <section class="about__container">
   <div class="text__container">
     <h2 class="about__title">
-      At Helder, we explore the boundaries of light and design to create
-      immersive experiences that go beyond the ordinary.
+      <span id="sentenceScroll"> At Helder, we explore the boundaries</span>
+      <span id="sentenceScroll">
+        of light and design to create conceptual
+      </span>
+      <span id="sentenceScroll">
+        experiences that go beyond the ordinary.
+      </span>
+      <span id="sentenceScroll"> </span>
+    </h2>
+
+    <h2 class="about__title">
+      <span id="sentenceScroll"> By blending light, space, and time with </span>
+      <span id="sentenceScroll"> innovative thinking, we design not just </span>
+      <span id="sentenceScroll"> objects, but holistic experiences that </span>
+      <span id="sentenceScroll">
+        resonate deeply with those who encounter
+      </span>
+      <span id="sentenceScroll">them. </span>
     </h2>
     <p class="about__paragraph">
-      By blending light, space, and time with innovative thinking, we design not
-      just objects, but holistic experiences that resonate deeply with those who
-      encounter them. Our work is a continuous journey of exploration and
-      experimentation, driven by a desire to redefine the relationship between
-      technology, design, and human experience.
+      Our work is a continuous journey of exploration and experimentation,
+      driven by a desire to redefine the relationship between technology,
+      design, and human experience.
     </p>
   </div>
 
-  <img class="about__image" src="src/lib/assets/image 6.png" alt="" />
+  <!-- <img class="about__image" src="src/lib/assets/image 6.png" alt="" /> -->
 </section>
 
 <style>
   .about__container {
     position: relative;
     display: grid;
-    height: 200vh;
+    height: 100vh;
     width: 100%;
     padding: var(--padding-large);
     gap: var(--padding-large);
-    grid-template-columns: 2fr 1fr;
-    background-color: var(--dark);
+    grid-template-columns: 4fr 1fr;
+    background-color: var(--light);
+    color: var(--dark);
   }
 
   .text__container {
     top: var(--padding-large);
-    position: sticky;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -79,37 +106,60 @@
   }
 
   .about__title {
-    font-size: 4rem;
+    font-size: clamp(2rem, 3vw, 5rem);
     font-weight: 400;
-    line-height: 1.1em;
-    color: var(--grey-dark);
+    line-height: 1.2em;
+    color: var(--dark);
     margin: 0;
   }
 
   .about__paragraph {
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.2em;
-    color: var(--grey);
-    width: 80%;
+    color: var(--dark);
+    width: 40%;
   }
 
   img {
-    position: sticky;
-    top: var(--padding-large);
-    width: 100%;
+    position: absolute;
+    bottom: var(--padding-large);
+    right: var(--padding-large);
+    width: 20rem;
     object-fit: cover;
+    border-radius: 0;
+    aspect-ratio: 3/4;
   }
 
   @media (max-width: 768px) {
     .about__container {
       grid-template-columns: 1fr;
-      padding: var(--padding-small);
+      padding: var(--padding-medium);
+      height: 60vh;
     }
 
     p {
       font-size: 1rem;
       width: 100%;
+    }
+
+    .text__container {
+      gap: var(--padding-small);
+    }
+
+    .about__title {
+      font-size: clamp(1.1rem, 2vw, 3rem);
+    }
+
+    .about__paragraph {
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 1.2em;
+      color: var(--dark);
+      width: 100%;
+      /* padding-left: 10rem; */
+      margin-top: 4rem;
+      max-width: 70%;
     }
   }
 </style>

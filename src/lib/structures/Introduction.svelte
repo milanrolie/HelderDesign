@@ -47,15 +47,15 @@
 
 <div class="events__container">
   <div class="event">
-    <h3 class="event__title">DUTCH DESIGN WEEK</h3>
-    <p class="event__location">Eindhoven hal 2</p>
-    <p class="event__date">23 - 31 October 2024</p>
+    <h3 class="event__title">PUIN @ THE POOL</h3>
+    <p class="event__location">Sectie c, Eindhoven</p>
+    <p class="event__date">28 September 2024</p>
   </div>
 
   <div class="event">
-    <h3 class="event__title">NEXT LOCATION</h3>
-    <p class="event__location">Eindhoven hal 2</p>
-    <p class="event__date">23 - 31 October 2024</p>
+    <h3 class="event__title">DUTCH DESIGN WEEK</h3>
+    <p class="event__location">Sectie c, Eindhoven</p>
+    <p class="event__date">19 - 27 October 2024</p>
   </div>
 </div>
 
@@ -77,7 +77,7 @@
 
   h2 {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--light);
     line-height: 1.1em;
   }
