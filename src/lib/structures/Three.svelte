@@ -138,9 +138,14 @@
       container.addEventListener("mouseout", handleMouseOut);
     } else {
       // Ensure touch events do not interfere with scrolling
-      container.addEventListener("touchstart", handleTouchStart, { passive: true });
-      container.addEventListener("touchmove", handleTouchMove, { passive: true });
+      container.addEventListener("touchstart", handleTouchStart, {
+        passive: true,
+      });
+      container.addEventListener("touchmove", handleTouchMove, {
+        passive: true,
+      });
     }
+  }
 
   function animate() {
     animationFrameId = requestAnimationFrame(animate);
