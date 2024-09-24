@@ -114,12 +114,13 @@
       u_texture: { type: "t", value: texture },
     };
 
-    // Create a plane mesh with materials
+    // Calculate the plane size based on the camera's frustum
+    const frustumHeight =
+      2 * Math.tan((camera.fov * Math.PI) / 180 / 2) * camera.position.z;
+    const frustumWidth = frustumHeight * camera.aspect;
+
     planeMesh = new THREE.Mesh(
-      new THREE.PlaneGeometry(
-        window.innerWidth / 400,
-        window.innerHeight / 400
-      ),
+      new THREE.PlaneGeometry(frustumWidth, frustumHeight),
       new THREE.ShaderMaterial({
         uniforms: shaderUniforms,
         vertexShader,
