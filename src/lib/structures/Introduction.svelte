@@ -142,5 +142,10 @@
     .event__date {
       font-size: 0.6rem;
     }
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
   }
 </style>

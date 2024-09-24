@@ -55,7 +55,7 @@
 </script>
 
 <section class="schermlicht__container" id="schermlicht">
-  <p class="project__tags">Schermlicht, project 1</p>
+  <p class="project__tags">Schermlicht, project 2</p>
   <div class="line"></div>
   <div class="text__container">
     <h2 class="schermlicht__title">

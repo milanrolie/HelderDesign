@@ -73,9 +73,7 @@
     return () => {
       window.removeEventListener("resize", onWindowResize);
       window.removeEventListener("scroll", handleScroll);
-      if (!isTouchDevice) {
-        window.removeEventListener("mousemove", handleMouseMove);
-      }
+
       cancelAnimationFrame(animationFrameId);
     };
   });
@@ -127,24 +125,13 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     container.appendChild(renderer.domElement);
 
-    // Check if the device is a touch device
-    const isTouchDevice =
-      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    // Event listeners for mouse interaction
+    container.addEventListener("mousemove", handleMouseMove, false);
+    container.addEventListener("mouseover", handleMouseOver, false);
+    container.addEventListener("mouseout", handleMouseOut, false);
 
-    if (!isTouchDevice) {
-      // Event listeners for mouse interaction
-      container.addEventListener("mousemove", handleMouseMove);
-      container.addEventListener("mouseover", handleMouseOver);
-      container.addEventListener("mouseout", handleMouseOut);
-    } else {
-      // Ensure touch events do not interfere with scrolling
-      container.addEventListener("touchstart", handleTouchStart, {
-        passive: true,
-      });
-      container.addEventListener("touchmove", handleTouchMove, {
-        passive: true,
-      });
-    }
+    // Handle window resize
+    window.addEventListener("resize", onWindowResize, false);
   }
 
   function animate() {
@@ -272,8 +259,7 @@
   }
 
   @media (max-width: 768px) {
-    div {
-      pointer-events: none;
+    .animated__background {
     }
   }
 </style>
