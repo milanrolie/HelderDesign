@@ -268,4 +268,10 @@
     width: 100% !important;
     object-fit: cover !important;
   }
+
+  @media (max-width: 768px) {
+    div {
+      pointer-events: none;
+    }
+  }
 </style>
