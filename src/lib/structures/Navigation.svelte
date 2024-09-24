@@ -33,7 +33,7 @@
 </script>
 
 <nav class="navigation">
-  <a href="/">
+  <a id="noEffect" href="/">
     <svg
       class="logo"
       width="561"
@@ -54,10 +54,10 @@
   </a>
   <ul>
     <!-- <li><a href="/about">About, </a></li> -->
-    <li><a href="#capsulated">Capsulated, </a></li>
+    <li><a class="link" href="#capsulated">Capsulated, </a></li>
 
-    <li><a href="#schermlicht">Schermlicht, </a></li>
-    <li><a href="/contact">Contact</a></li>
+    <li><a class="link" href="#schermlicht">Schermlicht, </a></li>
+    <li><a class="link" href="/contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -90,7 +90,7 @@
     font-weight: 300;
   }
 
-  a::before {
+  .link::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -103,7 +103,7 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  a:hover::before {
+  .link:hover::before {
     transform-origin: left;
     transform: scaleX(1);
   }

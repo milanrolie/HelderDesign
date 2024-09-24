@@ -24,7 +24,7 @@
 
   const ANIMATION_CONFIG = {
     transitionSpeed: 0.03,
-    baseIntensity: 0.02,
+    baseIntensity: 0.03,
     hoverIntensity: 0.009,
   };
 
@@ -69,15 +69,6 @@
     const imageElement = document.getElementById("myImage");
     init(new THREE.TextureLoader().load(imageElement.src));
     animate();
-
-    // Check if the device is a touch device
-    const isTouchDevice =
-      "ontouchstart" in window || navigator.maxTouchPoints > 0;
-
-    if (!isTouchDevice) {
-      // Add cursor effect logic here if not a touch device
-      window.addEventListener("mousemove", handleMouseMove);
-    }
 
     return () => {
       window.removeEventListener("resize", onWindowResize);
@@ -136,10 +127,16 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     container.appendChild(renderer.domElement);
 
-    // Event listeners for mouse interaction
-    container.addEventListener("mousemove", handleMouseMove, false);
-    container.addEventListener("mouseover", handleMouseOver, false);
-    container.addEventListener("mouseout", handleMouseOut, false);
+    // Check if the device is a touch device
+    const isTouchDevice =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    if (!isTouchDevice) {
+      // Event listeners for mouse interaction
+      container.addEventListener("mousemove", handleMouseMove);
+      container.addEventListener("mouseover", handleMouseOver);
+      container.addEventListener("mouseout", handleMouseOut);
+    }
 
     // Handle window resize
     window.addEventListener("resize", onWindowResize, false);
