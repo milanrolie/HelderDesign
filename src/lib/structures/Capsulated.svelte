@@ -6,35 +6,42 @@
   import rightImage from "$lib/assets/53627130833_1f63365729_o.jpg";
 </script>
 
-<section class="capsulated" id="capsulated">
-  <Marquee />
-  <p class="project__tags">Capsulated, project 1</p>
-  <div class="line"></div>
+<div class="overflow__fix">
+  <section class="capsulated" id="capsulated">
+    <Marquee />
+    <p class="project__tags">Capsulated, project 1</p>
+    <div class="line"></div>
 
-  <img class="capsulated__image" src={image} alt="" />
-  <div class="text__container">
-    <h2 class="capsulated__title">
-      With our first project, Capsulated, we aim to capture the immense power of
-      the sun in a single light fixture.
-    </h2>
-    <p class="capsulated__paragraph">
-      Inspired by the awe of sunrises and sunsets, Capsulated evokes a sense of
-      wonder through its dynamic design, where light refracts off a Perspex
-      plate, mimicking the subtle movement of the sun. The double-sided, modular
-      structure allows light to flow deeply into any environment, offering
-      tranquility and adapting to different settings. Capsulated redefines how
-      light and space interact, creating a deeply personal, sensory experience.
-    </p>
-  </div>
+    <img class="capsulated__image" src={image} alt="" />
+    <div class="text__container">
+      <h2 class="capsulated__title">
+        With our first project, Capsulated, we aim to capture the immense power
+        of the sun in a single light fixture.
+      </h2>
+      <p class="capsulated__paragraph">
+        Inspired by the awe of sunrises and sunsets, Capsulated evokes a sense
+        of wonder through its dynamic design, where light refracts off a Perspex
+        plate, mimicking the subtle movement of the sun. The double-sided,
+        modular structure allows light to flow deeply into any environment,
+        offering tranquility and adapting to different settings. Capsulated
+        redefines how light and space interact, creating a deeply personal,
+        sensory experience.
+      </p>
+    </div>
 
-  <div class="image__grid">
-    <img class="grid__image" src={leftImage} alt="" />
+    <div class="image__grid">
+      <img class="grid__image" src={leftImage} alt="" />
 
-    <img class="grid__image" src={rightImage} alt="" />
-  </div>
-</section>
+      <img class="grid__image" src={rightImage} alt="" />
+    </div>
+  </section>
+</div>
 
 <style>
+  .overflow__fix {
+    overflow: hidden;
+  }
+
   .capsulated {
     position: relative;
     width: 100%;

@@ -125,7 +125,9 @@
   </svg>
   <div class="footer__bottom">
     <p class="bottom__text">© 2024 helderdesign</p>
-    <a class="bottom__text noTransition" href="#top">Terms & conditions</a>
+    <a class="bottom__text noTransition mobile-hide" href="#top"
+      >Terms & conditions</a
+    >
     <p class="bottom__text">
       Website by <a href="https://studiorolie.com">studiorolie </a>
     </p>

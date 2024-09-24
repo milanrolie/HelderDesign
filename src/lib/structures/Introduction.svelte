@@ -17,7 +17,7 @@
     gsap.to(".title__container span, .events__container .event, nav, circle", {
       scrollTrigger: {
         trigger: ".title__container",
-        start: "top",
+        start: "top+=100 ",
         end: "center",
         scrub: true,
       },

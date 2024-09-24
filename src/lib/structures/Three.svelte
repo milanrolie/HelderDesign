@@ -70,8 +70,21 @@
     init(new THREE.TextureLoader().load(imageElement.src));
     animate();
 
+    // Check if the device is a touch device
+    const isTouchDevice =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    if (!isTouchDevice) {
+      // Add cursor effect logic here if not a touch device
+      window.addEventListener("mousemove", handleMouseMove);
+    }
+
     return () => {
       window.removeEventListener("resize", onWindowResize);
+      window.removeEventListener("scroll", handleScroll);
+      if (!isTouchDevice) {
+        window.removeEventListener("mousemove", handleMouseMove);
+      }
       cancelAnimationFrame(animationFrameId);
     };
   });
