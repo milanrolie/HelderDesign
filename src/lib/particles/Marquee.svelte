@@ -3,6 +3,8 @@
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
+  import image from "$lib/assets/image 6.png";
+
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -68,7 +70,7 @@
         />
       </svg>
 
-      <img class="image" src="src/lib/assets/image 6.png" alt="" />
+      <img class="image" src={image} alt="" />
       <!-- Duplicate the content to create an infinite loop effect -->
       <svg
         viewBox="0 0 2122 263"
@@ -117,7 +119,7 @@
         />
       </svg>
 
-      <img class="image" src="src/lib/assets/image 6.png" alt="" />
+      <img class="image" src={image} alt="" />
     </div>
   </div>
 </div>
