@@ -33,16 +33,12 @@
           <li class="links__item">
             <p class="links__link list__title">navigation</p>
           </li>
-          <li class="links__item">
-            <a href="/about" class="links__link">about</a>
-          </li>
-          <li class="links__item">
-            <a href="/cases" class="links__link">work</a>
-          </li>
-          <li class="links__item">
-            <a href="/#contact" class="links__link">contact</a>
-          </li>
+          <li><a class="links__item" href="#capsulated">Capsulated </a></li>
+
+          <li><a class="links__item" href="#schermlicht">Schermlicht </a></li>
+          <li><a class="links__item" href="/contact">Contact</a></li>
         </ul>
+
         <ul class="links__contact links__list">
           <li class="links__item">
             <p class="links__link list__title">contact</p>
@@ -142,7 +138,7 @@
     flex-direction: column;
     width: 100%;
     height: 80svh;
-    padding: var(--padding-small);
+    padding: var(--padding-large);
     background: none;
     z-index: 200;
     color: var(--light);
@@ -223,6 +219,7 @@
     align-items: center;
     font-size: var(--font-size-small);
     font-weight: 200;
+    pointer-events: all;
   }
 
   .bottom__text {
@@ -232,7 +229,7 @@
   @media (max-width: 768px) {
     .footer {
       height: auto;
-      padding-top: var(--padding-small);
+      padding: var(--padding-medium);
     }
 
     .footer__paragraph {
@@ -243,6 +240,10 @@
 
     .footer__title {
       width: 80%;
+    }
+
+    .links__navigation {
+      display: none;
     }
 
     .footer__links {
