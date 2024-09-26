@@ -88,7 +88,7 @@
   .about__container {
     position: relative;
     display: grid;
-    height: 100vh;
+    height: 100svh;
     width: 100%;
     padding: var(--padding-large);
     gap: var(--padding-large);
@@ -99,7 +99,7 @@
 
   .text__container {
     top: var(--padding-large);
-    height: 100vh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     gap: var(--padding-large);
@@ -135,7 +135,7 @@
     .about__container {
       grid-template-columns: 1fr;
       padding: var(--padding-medium);
-      height: 60vh;
+      height: 60svh;
     }
 
     p {

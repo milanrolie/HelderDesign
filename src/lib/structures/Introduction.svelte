@@ -67,7 +67,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100svh;
     width: 100%;
     z-index: 10;
     background-color: rgba(255, 255, 255, 0);

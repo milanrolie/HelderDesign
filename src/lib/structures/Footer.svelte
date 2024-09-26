@@ -141,7 +141,7 @@
     justify-content: flex-end;
     flex-direction: column;
     width: 100%;
-    height: 80vh;
+    height: 80svh;
     padding: var(--padding-small);
     background: none;
     z-index: 200;

@@ -218,7 +218,7 @@
     top: 0;
     inset: 0;
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     z-index: -1;
   }
 
@@ -226,14 +226,14 @@
     display: block;
     transition: 1s transform;
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     overflow: visible;
   }
 
   #imageContainer {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     overflow: hidden;
     display: flex;
     justify-content: center;

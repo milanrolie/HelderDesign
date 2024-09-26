@@ -144,14 +144,14 @@
 
   svg {
     position: relative;
-    height: 40vh;
+    height: 40svh;
   }
 
   .image {
     position: relative;
     object-fit: cover;
     aspect-ratio: 1;
-    height: 40vh;
+    height: 40svh;
   }
 
   @keyframes marquee {
