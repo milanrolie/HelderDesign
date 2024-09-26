@@ -131,7 +131,7 @@
     container.addEventListener("mouseout", handleMouseOut, false);
 
     // Handle window resize
-    window.addEventListener("resize", onWindowResize, false);
+    // window.addEventListener("resize", onWindowResize, false);
   }
 
   function animate() {

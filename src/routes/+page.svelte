@@ -7,6 +7,8 @@
   import FullImage from "$lib/particles/FullImage.svelte";
   import Schermlicht from "../lib/structures/Schermlicht.svelte";
   import Capsulated from "../lib/structures/Capsulated.svelte";
+
+  export const prerender = true;
 </script>
 
 <IntroAnimation />
