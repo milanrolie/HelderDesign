@@ -89,7 +89,7 @@
   .events__container {
     position: absolute;
     bottom: var(--padding-medium);
-    left: var(--padding-large);
+    left: var(--padding-medium);
     display: flex;
     gap: var(--padding-large);
     color: var(--light);
