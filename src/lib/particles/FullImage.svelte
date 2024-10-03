@@ -28,6 +28,7 @@
     overflow: hidden;
     aspect-ratio: 16/9;
     width: 100%;
+    z-index: 10;
   }
 
   img {

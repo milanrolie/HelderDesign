@@ -75,9 +75,11 @@
       <span id="sentenceScroll">them. </span>
     </h2>
     <p class="about__paragraph">
-      Our work is a continuous journey of exploration and experimentation,
-      driven by a desire to redefine the relationship between technology,
-      design, and human experience.
+      Founded by two Industrial Design graduates of Eindhoven University of
+      Technology, Helder Design combines an understanding of design principles
+      with practical expertise in event and experience production. By continuous
+      dreaming and prototyping, we embrace the connection between art, design,
+      and technology, emphasizing the act of experiencing.
     </p>
   </div>
 

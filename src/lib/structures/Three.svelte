@@ -259,7 +259,5 @@
   }
 
   @media (max-width: 768px) {
-    .animated__background {
-    }
   }
 </style>

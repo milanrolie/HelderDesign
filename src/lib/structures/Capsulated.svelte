@@ -118,6 +118,7 @@
 
     .text__container {
       grid-template-columns: 1fr;
+      padding: var(--padding-medium);
     }
 
     .capsulated__title {
