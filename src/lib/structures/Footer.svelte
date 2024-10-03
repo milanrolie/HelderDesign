@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import backgroundImage from "$lib/assets/40.jpg";
 
   onMount(() => {
     const footer = document.querySelector(".footer");
@@ -21,6 +22,7 @@
 </script>
 
 <footer class="footer" id="contact">
+  <img class="backround__image" src={backgroundImage} alt="" />
   <div class="overlay"></div>
   <div class="footer__container">
     <div class="footer__paragraph">
@@ -114,7 +116,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(76, 169, 255);
+    background: rgb(25, 57, 87);
     z-index: 1;
     opacity: 0.5;
   }
@@ -207,10 +209,25 @@
     margin: 0;
   }
 
+  .backround__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    display: none;
+  }
+
   @media (max-width: 768px) {
     .footer {
       height: auto;
       padding: var(--padding-medium);
+    }
+
+    .backround__image {
+      display: block;
     }
 
     .footer__paragraph {

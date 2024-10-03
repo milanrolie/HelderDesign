@@ -29,4 +29,10 @@
     height: 100%;
     overflow: hidden;
   }
+
+  @media (max-width: 768px) {
+    .fixed {
+      position: relative;
+    }
+  }
 </style>
