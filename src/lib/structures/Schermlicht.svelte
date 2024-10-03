@@ -60,28 +60,32 @@
   <div class="text__container">
     <h2 class="schermlicht__title">
       Schermlicht is our latest exploration into redefining the role of LED
-      screens in event environments. In an industry dominated by repetitive use
-      of large displays and excessive light effects, we see the potential for
-      transformation.
+      screens in day-to-day environments. In a world dominated by repetitive use
+      of large displays, we see opportunities for subtle yet expressive light
+      fixtures.
     </h2>
   </div>
   <img class="schermlicht__image" src={image} alt="" />
   <div class="paragraph__container">
     <p class="paragraph__title">
-      His project envisions LED screens as dynamic light sources that create
-      three-dimensional light volumes, allowing light to move beyond the flat,
-      two-dimensional plane and interact with the physical space.
+      Our aim is to develop new light effects that offer a more immersive
+      experience, shifting the screen’s function from capturing our world to
+      actively taking part in the spatial environment, ultimately enriching the
+      sensorial experience.
     </p>
 
     <p class="schermlicht__paragraph">
-      Our aim is to develop new lighting effects that offer a more immersive
-      experience, shifting screens from passive elements to active participants
-      in spatial design, ultimately enriching both performances and audience
-      engagement.
+      With Schermlicht, we envision LED screens as spatial light sources that
+      create three-dimensional light volumes, allowing light to move beyond the
+      flat, two-dimensional plane and interact with the physical space.
     </p>
     <p class="paragraph__tag">
       Schermlicht will be presented at the Dutch Design Week Eindhoven from
-      October 19th till 27th. You can find us at Sectie C, Hal 4.
+      October 19th till 27th. You can find us at Sectie C, Hall 4. See the DDW
+      website for more information: <a
+        href="https://ddw.nl/nl/programma/12272/schermlicht "
+        >Dutch Design Week</a
+      >
     </p>
   </div>
 </section>

@@ -143,6 +143,7 @@
     z-index: 200;
     color: var(--light);
     pointer-events: none;
+    z-index: 10;
   }
 
   .overlay {

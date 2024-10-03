@@ -15,17 +15,16 @@
     <img class="capsulated__image" src={image} alt="" />
     <div class="text__container">
       <h2 class="capsulated__title">
-        With our first project, Capsulated, we aim to capture the immense power
+        With our second project, Capsulated, we aim to capture the immense power
         of the sun in a single light fixture.
       </h2>
       <p class="capsulated__paragraph">
         Inspired by the awe of sunrises and sunsets, Capsulated evokes a sense
         of wonder through its dynamic design, where light refracts off a Perspex
         plate, mimicking the subtle movement of the sun. The double-sided,
-        modular structure allows light to flow deeply into any environment,
-        offering tranquility and adapting to different settings. Capsulated
-        redefines how light and space interact, creating a deeply personal,
-        sensory experience.
+        modular structure allows light to move through any environment, offering
+        tranquility and adaptation to different settings. Capsulated redefines
+        how light and space interact, creating an unique experience every time.
       </p>
     </div>
 

@@ -46,11 +46,11 @@
 </section>
 
 <div class="events__container">
-  <div class="event">
+  <!-- <div class="event">
     <h3 class="event__title">PUIN @ THE POOL</h3>
     <p class="event__location">Sectie c, Eindhoven</p>
     <p class="event__date">28 September 2024</p>
-  </div>
+  </div> -->
 
   <div class="event">
     <h3 class="event__title">DUTCH DESIGN WEEK</h3>
