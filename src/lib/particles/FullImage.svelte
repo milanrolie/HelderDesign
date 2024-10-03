@@ -33,7 +33,7 @@
   img {
     position: absolute;
     width: 100%;
-    height: 130%;
+    height: 140%;
     inset: 0;
     object-fit: cover;
     transform: translateY(-30%);

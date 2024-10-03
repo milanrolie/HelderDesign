@@ -54,10 +54,8 @@
   </a>
   <ul>
     <!-- <li><a href="/about">About, </a></li> -->
-    <li><a class="link" href="#capsulated">Capsulated, </a></li>
-
-    <li><a class="link" href="#schermlicht">Schermlicht, </a></li>
-    <li><a class="link" href="/contact">Contact</a></li>
+    <li><a class="link" href="#capsulated">Projects, </a></li>
+    <li><a class="link" href="#footer">Contact</a></li>
   </ul>
 </nav>
 

@@ -78,6 +78,9 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--padding-large);
     align-items: flex-end;
+    /* margin: 10rem 0; */
+    margin-bottom: var(--space);
+    padding: var(--padding-large);
   }
 
   .capsulated__title {

@@ -15,7 +15,7 @@
         end: "top",
         scrub: 1,
       },
-      scale: 1,
+      scale: 0.8,
     });
   });
 </script>
@@ -131,7 +131,7 @@
     width: 100%;
     height: max-content;
 
-    transform: translateX(-20%) scale(0.7);
+    transform: translateX(-20%) scale(0.5);
   }
 
   .marquee__container {

@@ -36,7 +36,7 @@
           <li><a class="links__item" href="#capsulated">Capsulated </a></li>
 
           <li><a class="links__item" href="#schermlicht">Schermlicht </a></li>
-          <li><a class="links__item" href="/contact">Contact</a></li>
+          <!-- <li><a class="links__item" href="/contact">Contact</a></li> -->
         </ul>
 
         <ul class="links__contact links__list">
@@ -151,7 +151,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(255, 136, 0);
+    background: rgb(76, 169, 255);
     z-index: -1;
     opacity: 0.5;
   }
