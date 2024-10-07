@@ -10,7 +10,7 @@
 <div class="overflow__fix">
   <section class="capsulated" id="capsulated">
     <MarqueeCapsulated />
-    <p class="project__tags">Capsulated, project 1</p>
+    <p class="project__tags">Capsulated, project 2</p>
     <div class="line"></div>
 
     <img class="capsulated__image" src={image} alt="" />
@@ -28,8 +28,6 @@
         how light and space interact, creating an unique experience every time.
       </p>
     </div>
-
-    <div class="image__grid"></div>
   </section>
 </div>
 

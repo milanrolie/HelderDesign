@@ -47,9 +47,10 @@
       ease: "none",
       scrollTrigger: {
         trigger: ".schermlicht__image",
-        start: "top-=100%",
+        start: "top-=200%",
         end: "top-=50%",
         scrub: true,
+        markers: true,
       },
     });
   });
@@ -59,7 +60,7 @@
   <Marquee />
 </div>
 <section class="schermlicht__container" id="schermlicht">
-  <p class="project__tags">Schermlicht, project 2</p>
+  <p class="project__tags">Schermlicht, project 1</p>
   <div class="line"></div>
   <div class="text__container">
     <h2 class="schermlicht__title">
@@ -109,7 +110,7 @@
     background-color: var(--darker);
     height: auto;
     padding: var(--padding-large);
-    padding-bottom: 25vh;
+    padding-bottom: 25svh;
   }
 
   .project__tags {

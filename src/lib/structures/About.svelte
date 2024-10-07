@@ -93,7 +93,7 @@
 
     width: 100%;
     padding: var(--padding-large);
-    padding-top: 25vh;
+    padding-top: 25svh;
     gap: var(--padding-large);
     grid-template-columns: 4fr 1fr;
     background-color: var(--light);
