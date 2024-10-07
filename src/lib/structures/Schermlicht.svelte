@@ -4,6 +4,7 @@
   import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
   import image from "$lib/assets/03_KarelAarts_Helder_DDW2024 (3 of 5).jpg";
+  import Marquee from "../particles/Marquee.svelte";
 
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -54,6 +55,9 @@
   });
 </script>
 
+<div class="marquee__container">
+  <Marquee />
+</div>
 <section class="schermlicht__container" id="schermlicht">
   <p class="project__tags">Schermlicht, project 2</p>
   <div class="line"></div>
@@ -93,11 +97,19 @@
 <!-- <FourGrid /> -->
 
 <style>
+  .marquee__container {
+    position: relative;
+    width: 100%;
+    background-color: var(--light);
+    overflow: hidden;
+  }
+
   .schermlicht__container {
     position: relative;
     background-color: var(--darker);
     height: auto;
     padding: var(--padding-large);
+    padding-bottom: 25vh;
   }
 
   .project__tags {
@@ -143,7 +155,7 @@
     margin-left: 10%;
     transform: translateY(10rem);
     transform: scaleX(-1);
-    margin-bottom: -10rem;
+    margin-bottom: 10rem;
   }
 
   .paragraph__container {

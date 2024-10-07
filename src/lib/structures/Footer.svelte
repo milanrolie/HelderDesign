@@ -57,6 +57,13 @@
               >+31 6 42 61 54 78</a
             >
           </li>
+          <li class="links__item">
+            <a
+              href="https://www.instagram.com/helderdesign.studio?igsh=MWQweHBrMm9ndnFmYQ=="
+              class="links__link noTransition"
+              >Instagram
+            </a>
+          </li>
 
           <li class="links__item">
             <p class="links__link">kvk 94349320</p>

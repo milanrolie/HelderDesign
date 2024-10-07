@@ -90,9 +90,10 @@
   .about__container {
     position: relative;
     display: grid;
-    height: 100svh;
+
     width: 100%;
     padding: var(--padding-large);
+    padding-top: 25vh;
     gap: var(--padding-large);
     grid-template-columns: 4fr 1fr;
     background-color: var(--light);

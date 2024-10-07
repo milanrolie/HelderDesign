@@ -4,11 +4,12 @@
   import image from "$lib/assets/53627131563_dd404e869a_o (1) (1).jpg";
   import leftImage from "$lib/assets/53627133473_eecef7fe9e_o (1).jpg";
   import rightImage from "$lib/assets/53627130833_1f63365729_o.jpg";
+  import MarqueeCapsulated from "../particles/MarqueeCapsulated.svelte";
 </script>
 
 <div class="overflow__fix">
   <section class="capsulated" id="capsulated">
-    <Marquee />
+    <MarqueeCapsulated />
     <p class="project__tags">Capsulated, project 1</p>
     <div class="line"></div>
 
@@ -28,11 +29,7 @@
       </p>
     </div>
 
-    <div class="image__grid">
-      <img class="grid__image" src={leftImage} alt="" />
-
-      <img class="grid__image" src={rightImage} alt="" />
-    </div>
+    <div class="image__grid"></div>
   </section>
 </div>
 
@@ -118,6 +115,7 @@
     .text__container {
       grid-template-columns: 1fr;
       padding: var(--padding-medium);
+      margin-bottom: 0;
     }
 
     .capsulated__title {
