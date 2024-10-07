@@ -50,7 +50,6 @@
         start: "top-=200%",
         end: "top-=50%",
         scrub: true,
-        markers: true,
       },
     });
   });

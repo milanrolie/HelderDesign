@@ -58,6 +58,11 @@
   }
 
   @media (max-width: 768px) {
+    .image-slider {
+      padding: var(--padding-medium);
+      overflow: scroll;
+    }
+
     .image__grid__image {
       width: 80vw;
     }
