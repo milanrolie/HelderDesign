@@ -42,16 +42,16 @@
         );
       });
 
-    gsap.from(".schermlicht__image", {
-      opacity: 0,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".schermlicht__image",
-        start: "top-=200%",
-        end: "top-=50%",
-        scrub: true,
-      },
-    });
+    // gsap.from(".schermlicht__image", {
+    //   opacity: 0,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: ".schermlicht__image",
+    //     start: "top-=200%",
+    //     end: "top-=50%",
+    //     scrub: true,
+    //   },
+    // });
   });
 </script>
 

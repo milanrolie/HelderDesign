@@ -3,7 +3,7 @@
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-  import image from "$lib/assets/image 6.png";
+  import image from "$lib/assets/60 copy Large.jpeg";
 
   let marqueeWrapper;
 

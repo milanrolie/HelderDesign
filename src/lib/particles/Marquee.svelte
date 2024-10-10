@@ -3,7 +3,7 @@
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-  import image from "$lib/assets/01_KarelAarts_Helder_Overig (3 of 3) (1).jpg";
+  import image from "$lib/assets/60 copy Large.jpeg";
 
   let marqueeWrapper;
 

@@ -35,9 +35,9 @@
           <li class="links__item">
             <p class="links__link list__title">navigation</p>
           </li>
+          <li><a class="links__item" href="#schermlicht">Schermlicht </a></li>
           <li><a class="links__item" href="#capsulated">Capsulated </a></li>
 
-          <li><a class="links__item" href="#schermlicht">Schermlicht </a></li>
           <!-- <li><a class="links__item" href="/contact">Contact</a></li> -->
         </ul>
 

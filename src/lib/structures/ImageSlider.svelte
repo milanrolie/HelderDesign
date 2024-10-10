@@ -1,6 +1,6 @@
 <script>
   import image1 from "$lib/assets/53627130833_1f63365729_o.jpg";
-  import image2 from "$lib/assets/02_KarelAarts_Helder_DDW2024 (2 of 5).jpg";
+  import image2 from "$lib/assets/53627133473_eecef7fe9e_o (1).jpg";
   import image3 from "$lib/assets/image 6.png";
 
   const images = [image1, image2, image3];
@@ -15,7 +15,7 @@
 
     Draggable.create(".image__grid", {
       type: "x",
-      bounds: ".image__grid",
+      bounds: ".image-slider",
       inertia: true,
     });
   });
@@ -35,8 +35,6 @@
     width: auto;
     overflow: hidden;
     background-color: var(--light);
-    padding: var(--padding-large);
-    overflow: hidden;
   }
 
   .image__grid {
@@ -45,6 +43,7 @@
     gap: var(--padding-large);
     cursor: grab;
     width: max-content;
+    padding: var(--padding-large);
   }
 
   .image__grid:active {

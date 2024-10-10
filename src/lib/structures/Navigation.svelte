@@ -33,7 +33,7 @@
 </script>
 
 <nav class="navigation">
-  <a id="noEffect" href="/">
+  <!-- <a id="noEffect" href="/">
     <svg
       class="logo"
       width="561"
@@ -51,7 +51,8 @@
         fill="#ECECE2"
       />
     </svg>
-  </a>
+  </a> -->
+  <div></div>
   <ul>
     <!-- <li><a href="/about">About, </a></li> -->
     <li><a class="link" href="#capsulated">Projects, </a></li>
