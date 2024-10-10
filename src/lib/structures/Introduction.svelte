@@ -80,7 +80,7 @@
     width: 100%;
     z-index: 10;
     background-color: rgba(255, 255, 255, 0);
-    /* pointer-events: none; */
+    pointer-events: none;
     gap: 1rem;
   }
 
