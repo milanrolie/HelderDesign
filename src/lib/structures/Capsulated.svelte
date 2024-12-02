@@ -1,10 +1,10 @@
 <script>
-  import Marquee from "../particles/Marquee.svelte";
+  import Marquee from '../particles/Marquee.svelte'
 
-  import image from "$lib/assets/53627131563_dd404e869a_o (1) (1).jpg";
-  import leftImage from "$lib/assets/53627133473_eecef7fe9e_o (1).jpg";
-  import rightImage from "$lib/assets/53627130833_1f63365729_o.jpg";
-  import MarqueeCapsulated from "../particles/MarqueeCapsulated.svelte";
+  import image from '$lib/assets/53627131563_dd404e869a_o (1) (1).jpg'
+  import leftImage from '$lib/assets/53627133473_eecef7fe9e_o (1).jpg'
+  import rightImage from '$lib/assets/53627130833_1f63365729_o.jpg'
+  import MarqueeCapsulated from '../particles/MarqueeCapsulated.svelte'
 </script>
 
 <div class="overflow__fix">
@@ -15,9 +15,11 @@
 
     <img class="capsulated__image" src={image} alt="" />
     <div class="text__container">
-      <h2 class="capsulated__title">
-        With our second project, Capsulated, we aim to capture the immense power
-        of the sun in a single light fixture.
+      <h2 class="capsulated__title" id="sentenceScroll">
+        <span id="sentenceScroll">With our second project, </span>
+        <span id="sentenceScroll">Capsulated, we intent to </span>
+        <span id="sentenceScroll">capture the immense power of </span>
+        <span id="sentenceScroll">the sun in a single light fixture. </span>
       </h2>
       <p class="capsulated__paragraph">
         Inspired by the awe of sunrises and sunsets, Capsulated evokes a sense
@@ -81,7 +83,7 @@
     font-size: clamp(2rem, 3vw, 4rem);
     font-weight: 400;
     color: var(--dark);
-    line-height: 1.1em;
+    line-height: 1.2em;
     margin-bottom: 10rem;
   }
 
@@ -114,10 +116,13 @@
       grid-template-columns: 1fr;
       padding: var(--padding-medium);
       margin-bottom: 0;
+      gap: var(--padding-small);
     }
 
     .capsulated__title {
       margin-bottom: 0;
+
+      font-size: 1.2rem;
     }
 
     .capsulated__paragraph {

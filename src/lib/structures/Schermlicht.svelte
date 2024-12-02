@@ -1,46 +1,48 @@
 <script>
-  import { onMount } from "svelte";
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+  import { onMount } from 'svelte'
+  import { gsap } from 'gsap'
+  import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-  import image from "$lib/assets/03_KarelAarts_Helder_DDW2024 (3 of 5).jpg";
-  import Marquee from "../particles/Marquee.svelte";
+  import image from '$lib/assets/03_KarelAarts_Helder_DDW2024 (3 of 5).jpg'
+  import Marquee from '../particles/Marquee.svelte'
+  import Video from './Video.svelte'
+  import ImageSliderTwo from './ImageSliderTwo.svelte'
 
   onMount(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
     const text = document.querySelector(
-      ".schermlicht__container  .schermlicht__title"
-    );
+      '.schermlicht__container  .schermlicht__title',
+    )
     // Split text into words instead of characters
     const words = text.innerText
-      .split(" ")
+      .split(' ')
       .map((word) => `<span>${word} </span>`) // Add a space after each word to maintain original spacing
-      .join("");
-    text.innerHTML = words;
+      .join('')
+    text.innerHTML = words
 
     const animation = gsap.timeline({
       scrollTrigger: {
-        trigger: ".schermlicht__title",
-        start: "top" - window.innerHeight,
-        end: "top-=200",
+        trigger: '.schermlicht__title',
+        start: 'top' - window.innerHeight,
+        end: 'top-=200',
         scrub: true,
       },
-    });
+    })
 
     gsap.utils
-      .toArray(".text__container .schermlicht__title span")
+      .toArray('.text__container .schermlicht__title span')
       .forEach((word, i) => {
         animation.to(
           word,
           {
-            color: "#ecece2",
+            color: '#ecece2',
             duration: 0,
-            ease: "none",
+            ease: 'none',
           },
-          i * 0.05
-        );
-      });
+          i * 0.05,
+        )
+      })
 
     // gsap.from(".schermlicht__image", {
     //   opacity: 0,
@@ -52,12 +54,13 @@
     //     scrub: true,
     //   },
     // });
-  });
+  })
 </script>
 
 <div class="marquee__container">
   <Marquee />
 </div>
+<Video />
 <section class="schermlicht__container" id="schermlicht">
   <p class="project__tags">Schermlicht, project 1</p>
   <div class="line"></div>
@@ -84,19 +87,24 @@
       flat, two-dimensional plane and interact with the physical space.
     </p>
     <p class="paragraph__tag">
-      Schermlicht will be presented at the Dutch Design Week Eindhoven from
-      October 19th till 27th. You can find us at Sectie C, Hall 4. See the DDW
-      website for more information: <a
-        href="https://ddw.nl/nl/programma/12272/schermlicht "
-        >Dutch Design Week</a
+      The audio-visual installation of Schermlicht was presented at the Dutch
+      Design Week 2024. Check our <a
+        class="link"
+        href="https://www.instagram.com/helderdesign.studio/">instagram</a
+      >
+      or
+      <a class="link" href="https://ddw.nl/nl/programma/12272/schermlicht "
+        >DDW website</a
       >
     </p>
   </div>
+
+  <ImageSliderTwo />
 </section>
 
 <!-- <FourGrid /> -->
 
-<style>
+<style lang="scss">
   .marquee__container {
     position: relative;
     width: 100%;
@@ -104,12 +112,20 @@
     overflow: hidden;
   }
 
+  .link {
+    color: white;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--grey-dark);
+      text-decoration: underline;
+    }
+  }
+
   .schermlicht__container {
     position: relative;
     background-color: var(--darker);
     height: auto;
-    padding: var(--padding-large);
-    padding-bottom: 25svh;
   }
 
   .project__tags {

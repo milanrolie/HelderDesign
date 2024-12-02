@@ -1,24 +1,6 @@
 <script>
-  import { onMount } from "svelte";
-  import backgroundImage from "$lib/assets/40.jpg";
-
-  onMount(() => {
-    const footer = document.querySelector(".footer");
-    const svg = document.getElementById("mySvg");
-    const pageWidth = window.innerWidth;
-
-    footer.addEventListener("mousemove", (event) => {
-      const mouseY = event.clientY;
-      const relativePosition = mouseY / footer.offsetHeight - 0.4;
-      const blurAmount = relativePosition * 30; // Adjust this value to change the maximum blur amount
-
-      svg.style.filter = `blur(${blurAmount}px)`;
-    });
-
-    footer.addEventListener("mouseleave", () => {
-      svg.style.filter = "none";
-    });
-  });
+  import { onMount } from 'svelte'
+  import backgroundImage from '$lib/assets/40.jpg'
 </script>
 
 <footer class="footer" id="contact">
@@ -27,8 +9,10 @@
   <div class="footer__container">
     <div class="footer__paragraph">
       <h3 class="footer__title mobile-hide">
-        Whether you have a question or a creative challenge, we’re here to help.
-        Reach out to us via email or give us a call. We’d love to hear from you!
+        Interested in one of our fixtures, or want us to help create a memorable
+        experience? Whether you have a question or a creative challenge, we're
+        here to help. Reach out to us via email or give us a call. We'd love to
+        hear from you!
       </h3>
       <div class="footer__links">
         <ul class="links__navigation links__list">
@@ -37,6 +21,25 @@
           </li>
           <li><a class="links__item" href="#schermlicht">Schermlicht </a></li>
           <li><a class="links__item" href="#capsulated">Capsulated </a></li>
+
+          <li>
+            <a href="mailto:info@helderdesign.studio" class="footer__mail"
+              >Send us an email <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 200 200"
+                ><path
+                  fill=""
+                  d="M138.832 137.698h-77c-5.2 0-9.5-4.3-9.5-9.5v-57c0-5.2 4.3-9.5 9.5-9.5h77c5.2 0 9.5 4.3 9.5 9.5v57c0 5.2-4.3 9.5-9.5 9.5zm-77-72c-3 0-5.5 2.5-5.5 5.5v57c0 3 2.5 5.5 5.5 5.5h77c3 0 5.5-2.5 5.5-5.5v-57c0-3-2.5-5.5-5.5-5.5h-77z"
+                /><path
+                  fill=""
+                  d="M100.332 112.098c-.5 0-1-.2-1.4-.6l-31.6-31.6c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0l30.2 30.1 30.8-30.8c.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8l-32.2 32.3c-.4.4-.9.6-1.4.6z"
+                /><path
+                  fill=""
+                  d="M69.032 122.198c-.5 0-1-.2-1.4-.6-.8-.8-.8-2 0-2.8l20.7-20.7c.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8l-20.6 20.7c-.4.4-1 .6-1.5.6zM132.632 122.198c-.5 0-1-.2-1.4-.6l-20.7-20.7c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0l20.7 20.7c.8.8.8 2 0 2.8-.4.4-.9.6-1.4.6z"
+                /></svg
+              ></a
+            >
+          </li>
 
           <!-- <li><a class="links__item" href="/contact">Contact</a></li> -->
         </ul>
@@ -52,6 +55,7 @@
               >info@helderdesign.studio
             </a>
           </li>
+
           <li class="links__item margin__bottom">
             <a href="tel:+31612345678" class="links__link noTransition"
               >+31 6 42 61 54 78</a
@@ -101,7 +105,7 @@
   </div>
 </footer>
 
-<style>
+<style lang="scss">
   .footer {
     position: relative;
     display: flex;
@@ -146,7 +150,7 @@
     position: relative;
     font-size: var(--font-size-medium);
     font-weight: 100;
-    width: 25rem;
+    width: 30rem;
     margin: 0;
     z-index: 10;
   }
@@ -225,6 +229,41 @@
     object-fit: cover;
     z-index: 0;
     display: none;
+  }
+
+  .footer__mail {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: var(--gap-small);
+    z-index: 10;
+    font-size: var(--font-size-small);
+    font-weight: 200;
+    cursor: pointer;
+    pointer-events: all;
+    background-color: var(--light);
+    color: var(--dark);
+    font-weight: 400;
+    padding: var(--padding-small);
+    width: max-content;
+    transition: 0.3s;
+    margin-top: 1rem;
+
+    & svg {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &:hover {
+      background-color: var(--dark);
+      color: var(--light);
+
+      & svg {
+        fill: var(--light);
+      }
+    }
   }
 
   @media (max-width: 768px) {

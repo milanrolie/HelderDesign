@@ -1,31 +1,31 @@
 <script>
-  import { onMount } from "svelte";
-  import gsap from "gsap";
-  import ScrollTrigger from "gsap/dist/ScrollTrigger";
+  import { onMount } from 'svelte'
+  import gsap from 'gsap'
+  import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
   onMount(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
-    gsap.from(".introduction span, .events__container .event, .logo", {
+    gsap.from('.introduction span, .events__container .event, .logo', {
       opacity: 0,
       stagger: 0.2,
-      ease: "power1.inOut",
+      ease: 'power1.inOut',
       duration: 1,
       delay: 3.5,
-    });
+    })
 
-    gsap.to(".introduction span, .events__container .event, nav, .logo", {
+    gsap.to('.introduction span, .events__container .event, nav, .logo', {
       scrollTrigger: {
-        trigger: ".introduction",
-        start: "top+=100 ",
-        end: "center",
+        trigger: '.introduction',
+        start: 'top+=100 ',
+        end: 'center',
         scrub: true,
       },
       opacity: 0,
       y: -50,
       stagger: 0.2,
-    });
-  });
+    })
+  })
 </script>
 
 <section class="introduction">
@@ -53,19 +53,19 @@
     </svg>
 
     <h2>
-      <span> Designing light, crafting conceptual </span>
-      <span> experiences that transform spaces.</span>
+      <span>Designing light & crafting conceptual</span>
+      <span>experiences that transform spaces.</span>
     </h2>
   </div>
 </section>
 
-<div class="events__container">
+<!-- <div class="events__container">
   <div class="event">
     <h3 class="event__title">DUTCH DESIGN WEEK</h3>
     <p class="event__location">Sectie c, Eindhoven</p>
     <p class="event__date">19 - 27 October 2024</p>
   </div>
-</div>
+</div> -->
 
 <style>
   .introduction {

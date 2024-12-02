@@ -1,55 +1,26 @@
 <script>
-  import { onMount } from "svelte";
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+  import { onMount } from 'svelte'
+  import { gsap } from 'gsap'
+  import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
   onMount(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
-    // const text = document.querySelector(".about__container .about__title");
-    // // Split text into words instead of characters
-    // const words = text.innerText
-    //   .split(" ")
-    //   .map((word) => `<span>${word} </span>`) // Add a space after each word to maintain original spacing
-    //   .join("");
-    // text.innerHTML = words;
-
-    // const animation = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: ".about__title",
-    //     start: "top-=100",
-    //     end: "center",
-    //     scrub: false,
-    //   },
-    // });
-
-    // gsap.utils
-    //   .toArray(".about__container .about__title span")
-    //   .forEach((word, i) => {
-    //     animation.to(
-    //       word,
-    //       {
-    //         color: "#1E1E1E",
-    //         duration: 0,
-    //         ease: "none",
-    //       },
-    //       i * 0.05
-    //     );
-    //   });
-
-    gsap.to("#sentenceScroll", {
-      scrollTrigger: {
-        trigger: ".about__title",
-        start: "top-=500",
-        end: "bottom",
-      },
-      duration: 1,
-      y: 0,
-      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-      stagger: 0.08,
-      ease: "power4.out",
-    });
-  });
+    // Select all sentenceScroll elements and animate each individually
+    gsap.utils.toArray('#sentenceScroll').forEach((sentence) => {
+      gsap.to(sentence, {
+        scrollTrigger: {
+          trigger: sentence, // Changed to trigger on each sentence
+          start: 'top-=500',
+          end: 'bottom',
+        },
+        duration: 1,
+        y: 0,
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+        ease: 'power4.out',
+      })
+    })
+  })
 </script>
 
 <section class="about__container">

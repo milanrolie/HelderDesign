@@ -1,25 +1,25 @@
 <script>
-  import { onMount } from "svelte";
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+  import { onMount } from 'svelte'
+  import { gsap } from 'gsap'
+  import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-  import image from "$lib/assets/60 copy Large.jpeg";
+  import image from '$lib/assets/60 copy Large.jpeg'
 
-  let marqueeWrapper;
+  let marqueeWrapper
 
   onMount(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
-    gsap.to(".marquee__wrapper", {
+    gsap.to('.marquee__wrapper', {
       scrollTrigger: {
         trigger: marqueeWrapper,
-        start: "top" - window.innerHeight,
-        end: "top",
+        start: 'top' - window.innerHeight,
+        end: 'top',
         scrub: 1,
       },
       scale: 0.8,
-    });
-  });
+    })
+  })
 </script>
 
 <div class="overflow__fix">
@@ -127,7 +127,7 @@
     width: 100%;
     height: max-content;
 
-    transform: translateX(-20%) scale(0.5);
+    transform: translateX(-20%) scale(0.5) translateY(5px);
   }
 
   .marquee__container {
