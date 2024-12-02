@@ -16,7 +16,9 @@
   let swiper
 
   onMount(() => {
-    const swiperEl = document.querySelector('swiper-container')
+    const swiperEl = document.querySelector(
+      '.project-image-slider swiper-container',
+    )
     const swiperParams = {
       pagination: true,
       paginationClickable: true,
@@ -51,16 +53,16 @@
   }
 </script>
 
-<div class="image-slider">
-  <div class="navigation-buttons">
-    <button on:click={slidePrev} class="nav-button"
+<div class="project-image-slider">
+  <div class="project-image-slider__navigation">
+    <button on:click={slidePrev} class="project-image-slider__nav-button"
       ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
         ><path
           d="m12.718 4.707-1.413-1.415L2.585 12l8.72 8.707 1.413-1.415L6.417 13H20v-2H6.416l6.302-6.293z"
         /></svg
       ></button
     >
-    <button on:click={slideNext} class="nav-button"
+    <button on:click={slideNext} class="project-image-slider__nav-button"
       ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
         ><path
           d="m11.293 19.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414L17.586 11H4v2h13.584l-6.293 6.293z"
@@ -71,14 +73,14 @@
   <swiper-container pagination="true">
     {#each images as image}
       <swiper-slide>
-        <img src={image} alt="" class="image__grid__image" />
+        <img src={image} alt="" class="project-image-slider__image" />
       </swiper-slide>
     {/each}
   </swiper-container>
 </div>
 
 <style lang="scss">
-  .image-slider {
+  .project-image-slider {
     position: relative;
     padding: var(--padding-large) 0 var(--padding-large) var(--padding-small);
     background-color: var(--light);
@@ -88,12 +90,12 @@
     }
   }
 
-  swiper-container {
+  .project-image-slider swiper-container {
     width: 100%;
     height: 100%;
   }
 
-  swiper-slide {
+  .project-image-slider swiper-slide {
     text-align: center;
     font-size: 18px;
     display: flex;
@@ -102,7 +104,7 @@
     cursor: grab;
   }
 
-  swiper-slide img {
+  .project-image-slider swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
@@ -110,7 +112,7 @@
     aspect-ratio: 3/4;
   }
 
-  .navigation-buttons {
+  .project-image-slider__navigation {
     display: flex;
     gap: 1rem;
     justify-content: flex-end;
@@ -121,7 +123,7 @@
     }
   }
 
-  .nav-button {
+  .project-image-slider__nav-button {
     padding: 1rem;
     display: flex;
     align-items: center;
