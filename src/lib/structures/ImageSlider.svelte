@@ -21,7 +21,7 @@
       pagination: true,
       paginationClickable: true,
 
-      slidesPerView: 1.5,
+      slidesPerView: 2.5,
       spaceBetween: 20,
       breakpoints: {
         768: {

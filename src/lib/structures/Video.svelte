@@ -2,7 +2,7 @@
   let video
   let muted = true
 
-  let videoSrc = 'src/lib/assets/schermlicht.webm'
+  import videoSrc from '$lib/assets/schermlicht.webm'
 
   function toggleMute() {
     muted = !muted
